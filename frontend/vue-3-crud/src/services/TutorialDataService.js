@@ -11,6 +11,9 @@ class TutorialDataService {
 
   create(data) {
     return http.post("/tutorials", data);
+    // return http.post("http://tinderMusic/apiserver/tutorials") --> back http://api-server
+    // http://localhost:8082/tutorials
+    // http://localhost:8081/tutorials
   }
 
   update(id, data) {
