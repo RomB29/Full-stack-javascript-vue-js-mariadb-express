@@ -54,7 +54,7 @@ app.post("/TESTGP", async function(req, res) {
 app.get("/TESTGP", async function(req, res) { 
     //ajout du truc dans la bdd
     try {
-        const sql = '';
+        const sql = 'SELECT *';
         console.log("SQL query = " + sql)
         const rows = await poolGP.query(sql); // pool --> sémaphore
         console.log(rows.length);
