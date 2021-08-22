@@ -54,13 +54,13 @@ app.post("/TESTGP", async function(req, res) {
 app.get("/TESTGP", async function(req, res) { 
     //ajout du truc dans la bdd
     try {
-        const sql = 'SELECT *';
+    const sql = 'SELECT * FROM tutorials ';
         console.log("SQL query = " + sql)
         const rows = await poolGP.query(sql); // pool --> sémaphore
-        console.log(rows.length);
+   console.log(rows.length);
         console.log('---------------------------');
         console.log(rows);
-        res.send("Job done by " + req.body.usernameGivenByRequest);
+        res.json(rows);
     } catch (e) {
         console.error(e);
         res.send("Error ! See console Log")
